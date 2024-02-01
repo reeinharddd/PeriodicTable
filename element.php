@@ -21,31 +21,15 @@
         if (!$array) {
             echo "No hay datos o hay un error en la decodificación del JSON.";
         } else {
-            foreach ($array['elements'] as $key => $value) {
-            }
-            if (is_array($value)) {
-                foreach ($value as $key2 => $value2) {
-                    if (is_array($value2)) {
-                        foreach ($value2 as $key3 => $value3) {
-                            if (is_array($value3)) {
-                                foreach ($value3 as $key4 => $value4) {
-                                }
-                            } else {
-                                echo "$key3: $value3";
-                                echo "<br>";
-                            }
-                        }
-                    } else {
-                        echo "$key2: $value2";
-                        echo "<br>";
-                    }
-                }
-            } else {
-                echo "$key: $value";
-                echo "<br>";
+            foreach ($array['elements'] as $elements) {
+            if ($elements['name'] === $elementName){
+foreach($elements as $key => $element){
+    echo "$key: $element<br>";
+}          }
             }
         }
     }
+    
     ?>
 </body>
 
