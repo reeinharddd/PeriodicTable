@@ -38,15 +38,17 @@ if (!$array) {
             if (isset($array['elements'][$index])) {
                 $element = $array['elements'][$index];
 
-                echo "<div class='cell'>";
                 echo "<a href='element.php?elemento=" . $element['name'] . "'>";
+                                echo "<div class='cell'>";
+
                 echo "<div class='element'>";
                 echo "<div class='at_num'>" . $element['number'] . "</div>";
                 echo "<div class='symbol'>" . $element['symbol'] . "</div>";
                 echo "<div class='at_details'>" . $element['name'] . "<br />" . $element['atomic_mass'] . "</div>";
                 echo "</div>";
+                                echo "</div>";
+
                 echo "</a>";
-                echo "</div>";
             } else {
                 echo "<div class='cell'></div>";
             }
