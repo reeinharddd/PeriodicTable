@@ -8,6 +8,9 @@
 </head>
 
 <body>
+<header>
+
+</header>
 
     <?php
     if (isset($_GET['elemento'])) {
@@ -22,14 +25,15 @@
             echo "No hay datos o hay un error en la decodificación del JSON.";
         } else {
             foreach ($array['elements'] as $elements) {
-            if ($elements['name'] === $elementName){
-foreach($elements as $key => $element){
-    echo "$key: $element<br>";
-}          }
+                if ($elements['name'] === $elementName) {
+                    foreach ($elements as $key => $element) {
+                        echo "$key: $element<br>";
+                    }
+                }
             }
         }
     }
-    
+
     ?>
 </body>
 
