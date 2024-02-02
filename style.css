@@ -89,6 +89,16 @@ body {
     background-color: chartreuse;
 }
 
+
+/* .cell:hover .noble_gas {
+    border-color: rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    transform: scale(3, 3);
+    z-index: 1;
+    background-color: yellowgreen;
+} */
+
 .cell:nth-child(1) .element {
     -webkit-transform-origin: 0 50%;
     -ms-transform-origin: 0 50%;
