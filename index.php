@@ -20,7 +20,7 @@
 
     $data = file_get_contents($url);
     $array = json_decode($data, true);
-
+echo "<main>";
     if (!$array) {
         echo "No hay datos o hay un error en la decodificación del JSON.";
     } else {
@@ -60,6 +60,7 @@
 
         echo "</div>";
     }
+    echo "</main>";
     ?>
 
 </body>
