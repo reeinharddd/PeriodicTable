@@ -47,7 +47,8 @@ body {
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    background-color: rgba(0, 128, 128, 0.9);
+    /* background-color: rgba(0, 128, 128, 0.9); */
+    filter: saturate(45%);
 }
 
 .at_num,
@@ -82,7 +83,7 @@ body {
 }
 
 .cell .diatomic_nonmetal {
-    background-color: aquamarine;
+    background-color: #5898f9;
 }
 
 .cell .noble_gas {
@@ -90,11 +91,11 @@ body {
 }
 
 .cell .alkali_metal {
-    background-color: rgb(0, 26, 255);
+    background-color: rgb(97, 112, 243);
 }
 
 .cell .alkaline_earth_metal {
-    background-color: rgb(217, 0, 255);
+    background-color: #f9637c;
 }
 
 .cell .metalloid {
@@ -119,6 +120,18 @@ body {
 
 .cell .actinide {
     background-color: rgb(255, 247, 0);
+}
+
+.cell .Gas {
+    color: red;
+}
+
+.cell .Solid {
+    color: rgb(17, 0, 255);
+}
+
+.cell .Liquid {
+    color: rgb(255, 0, 234);
 }
 
 

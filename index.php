@@ -44,7 +44,7 @@ echo "<main>";
 
                     echo "<div class='element " . $category . "'>";
                     echo "<div class='at_num'>" . $element['number'] . "</div>";
-                    echo "<div class='symbol'>" . $element['symbol'] . "</div>";
+                    echo "<div class='symbol ".$element['phase']."'>" . $element['symbol'] . "</div>";
                     echo "<div class='at_details'>" . $element['name'] . "<br />" . $element['atomic_mass'] . "</div>";
                     echo "</div>";
                     echo "</div>";
