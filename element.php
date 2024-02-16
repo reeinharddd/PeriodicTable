@@ -24,35 +24,54 @@
 
         echo "<div class='container'>";
         echo "<div class='grid'>";
+        
         if (!$array) {
             echo "No hay datos o hay un error en la decodificación del JSON.";
         } else {
             foreach ($array['elements'] as $element) {
                 if ($element['name'] === $elementName) {
-                    echo '' . $elements['name'] . '';
+                    echo "<div class='item-a item'>";
+                    echo "1";
+                    echo "</div>";
 
-                    echo "<div class='item-b'>
-                       <p>
-                        " . $element['category'] . "
-                        </p>
-                        </div>";
-                    echo "<div class='item-b'></div>";
-                    echo "<div class='item-c'></div>";
+                    echo "<div class='item-b item'>
+                    2
+                    </div>";
 
-                    echo "<div class='item-d'></div>";
+                    echo "<div class='item-c item'>
+                    3
+                    </div>";
 
-                    echo "<div class='item-d'></div>";
+                    echo "<div class='item-d item'>
+                    4
+                    </div>";
 
-                    echo "<div class='item-e'></div>";
+                    echo "<div class='item-d item'>
+                    5
+                    </div>";
 
-                    echo "<div class='item-f'></div>";
+                    echo "<div class='item-e item'>
+                    6
+                    </div>";
 
-                    echo "<div class='item-g'></div>";
+                    echo "<div class='item-f item'>
+                    7
+                    </div>";
 
-                    echo "<div class='item-h'></div>";
+                    echo "<div class='item-g item'>
+                    8
+                    </div>";
 
-                    echo "<div class='item-i'></div>";
-                    echo "<div class='item-j'></div>";
+                    echo "<div class='item-h item'>
+                    9
+                    </div>";
+
+                    echo "<div class='item-i item'>
+                    10
+                    </div>";
+                    echo "<div class='item-j nt3'>
+                    11 (No tan necesario)
+                    </div>";
                 }
             }
         }
@@ -61,6 +80,7 @@
     }
 
     ?>
+    </div>
 </body>
 
 </html>
