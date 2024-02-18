@@ -1,5 +1,5 @@
 body {
-    background-color: #80b864;
+    background-color: #d3e2cc;
 }
 
 .container {
@@ -109,8 +109,8 @@ body {
 }
 
 .item:hover {
-    background-color: #222;
-    color: #FFFF63;
+    background-color: #709357;
+    color: #eef0ea;
     transition: all 0.25s ease;
 }
 

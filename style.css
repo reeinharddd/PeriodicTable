@@ -16,7 +16,7 @@ main{
     margin-right: -1px;
     text-shadow: none;
     grid-template-columns: repeat(18, 1fr);
-    grid-template-rows: repeat(9, 1fr);
+    grid-template-rows: repeat(11, 1fr);
 }
 
 .cell{
@@ -38,6 +38,39 @@ main{
 .cell:nth-child(13){
     grid-column-start: 13;
 }
+
+
+.lantanides{
+    display: grid;
+    float: left;
+    position: relative;
+    border-radius: 15px;
+    grid-row-start: 9;
+    grid-column-start: 4;
+    grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
+
+}
+.lantanides:hover .element {
+    border-color: rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    transform: scale(3, 3);
+    z-index: 1;
+    /* background-color: rgba(0, 128, 128, 0.9); */
+    filter: saturate(45%);
+}
+
+.actinides{
+    display: grid;
+    float: left;
+    position: relative;
+    border-radius: 15px;
+    grid-row-start: 10;
+    grid-column-start: 4;
+    grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
+
+}
+
 
 
 .element {
@@ -99,6 +132,7 @@ main{
 }
 
 .cell .diatomic_nonmetal {
+    
     background-color: #5898f9;
 }
 

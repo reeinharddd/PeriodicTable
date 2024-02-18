@@ -20,7 +20,8 @@
     } else {
         echo "<div class ='periodic'>";
         foreach ($array['elements'] as $element) {
-            echo "<a class='cell' href='element.php?elemento=" . $element['name'] . "''>";
+            if ($element['number']>=58 && $element['number']<=71){
+                echo "<a class='lantanides' href='element.php?elemento=" . $element['name'] . "''>";
             $category = str_replace(' ', '_', $element["category"]);
             echo "<div class='element " . $category . "'>";
             echo "<div class='at_num'>" . $element['number'] . "</div>";
@@ -29,11 +30,36 @@
             echo "</div>";
 
             echo "</a>";
+                
+            }else if ($element['number']>=90 && $element['number']<=103){
+                echo "<a class='actinides' href='element.php?elemento=" . $element['name'] . "''>";
+            $category = str_replace(' ', '_', $element["category"]);
+            echo "<div class='element " . $category . "'>";
+            echo "<div class='at_num'>" . $element['number'] . "</div>";
+            echo "<div class='symbol " . $element['phase'] . "'>" . $element['symbol'] . "</div>";
+            echo "<div class='at_details'>" . $element['name'] . "<br />" . $element['atomic_mass'] . "</div>";
+            echo "</div>";
+
+            echo "</a>";
+
+            }else{
+echo "<a class='cell' href='element.php?elemento=" . $element['name'] . "''>";
+            $category = str_replace(' ', '_', $element["category"]);
+            echo "<div class='element " . $category . "'>";
+            echo "<div class='at_num'>" . $element['number'] . "</div>";
+            echo "<div class='symbol " . $element['phase'] . "'>" . $element['symbol'] . "</div>";
+            echo "<div class='at_details'>" . $element['name'] . "<br />" . $element['atomic_mass'] . "</div>";
+            echo "</div>";
+
+            echo "</a>";
+            }
+            
         }
 
         echo "</div>";
     }
     ?>
+    
 </main>
 </body>
 
