@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial;
     -webkit-transform: translateZ(0);
@@ -28,6 +29,7 @@ main{
 }
 
 .cell:nth-child(2){
+    
     grid-column-start: 18;
 }
 
@@ -42,13 +44,16 @@ main{
 
 .lantanides{
     display: grid;
-    float: left;
+    float: right;
     position: relative;
-    border-radius: 15px;
     grid-row-start: 9;
     grid-column-start: 4;
+background-color: rgb(26, 144, 116);
     grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
 
+}
+.lantanides .element{
+-ms-grid-column-span: 1;
 }
 .lantanides:hover .element {
     border-color: rgba(0, 0, 0, 0.1);
@@ -56,7 +61,7 @@ main{
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    /* background-color: rgba(0, 128, 128, 0.9); */
+    background-color: rgba(0, 128, 128, 0.9);
     filter: saturate(45%);
 }
 
@@ -64,7 +69,6 @@ main{
     display: grid;
     float: left;
     position: relative;
-    border-radius: 15px;
     grid-row-start: 10;
     grid-column-start: 4;
     grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
@@ -81,13 +85,13 @@ main{
     right: 1px;
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgb(0, 0, 0);
     text-align: center;
     cursor: default;
     pointer-events: none;
     -webkit-transition: all 200ms ease;
     transition: all 200ms ease;
-    background-color: rgba(0, 128, 128, 0.6);
+    
 }
 
 .cell:hover .element {
@@ -96,7 +100,6 @@ main{
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    /* background-color: rgba(0, 128, 128, 0.9); */
     filter: saturate(45%);
 }
 
@@ -131,9 +134,12 @@ main{
     right: 0px;
 }
 
+/* Colores del cell */
+
 .cell .diatomic_nonmetal {
     
     background-color: #5898f9;
+
 }
 
 .cell .noble_gas {
@@ -153,7 +159,7 @@ main{
 }
 
 .cell .polyatomic_nonmetal {
-    background-color: rgb(255, 0, 0);
+    background-color: #5898f9;
 }
 
 .cell .post-transition_metal {
@@ -182,52 +188,6 @@ main{
 
 .cell .Liquid {
     color: rgb(255, 0, 234);
-}
-
-
-/* .cell:hover .noble_gas {
-    border-color: rgba(0, 0, 0, 0.1);
-    -webkit-transform: scale(3, 3);
-    -ms-transform: scale(3, 3);
-    transform: scale(3, 3);
-    z-index: 1;
-    background-color: yellowgreen;
-} */
-
-/* .cell:nth-child(1) .element {
-    -webkit-transform-origin: 0 50%;
-    -ms-transform-origin: 0 50%;
-    transform-origin: 0 50%;
-}
-
-.cell:nth-child(18) .element {
-    -webkit-transform-origin: 100% 50%;
-    -ms-transform-origin: 100% 50%;
-    transform-origin: 100% 50%;
-} */
-
-.periodic-row:nth-child(10) .cell .element {
-    -webkit-transform-origin: 50% 100%;
-    -ms-transform-origin: 50% 100%;
-    transform-origin: 50% 100%;
-}
-
-.periodic-row:nth-child(1) .cell:nth-child(1) .element {
-    -webkit-transform-origin: 0 0;
-    -ms-transform-origin: 0 0;
-    transform-origin: 0 0;
-}
-
-.periodic-row:nth-child(1) .cell:nth-child(18) .element {
-    -webkit-transform-origin: 100% 0;
-    -ms-transform-origin: 100% 0;
-    transform-origin: 100% 0;
-}
-
-.periodic-row:nth-child(10) .cell:nth-child(18) .element {
-    -webkit-transform-origin: 100% 100%;
-    -ms-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
 }
 
 @media (min-width: 600px) {

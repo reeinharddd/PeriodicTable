@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="test.css">
 
 </head>
- <script type = "module" src = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-   
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 <body>
     <header>
 
@@ -34,7 +34,7 @@
                     echo "<div class='item-a item'>";
                     echo "1";
                     echo "<h1>" . $element['name'] . "</h1>";
-                    echo "<model-viewer src='".$element['bohr_model_3d']."' ar ar-modes='webxr scene-viewer quick-look' camera-controls tone-mapping='commerce' poster='poster.webp' shadow-intensity='1' autoplay> </model-viewer> ";
+                    echo "<model-viewer src='".$element['bohr_model_3d']."' ar ar-modes='webxr scene-viewer quick-look' camera-controls tone-mapping='commerce' poster='poster.webp' shadow-intensity='2' autoplay> </model-viewer> ";
                     echo "</div>";
 
                     echo "<div class='item-b item'>
