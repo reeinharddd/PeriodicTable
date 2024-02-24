@@ -9,8 +9,8 @@
 </head>
 
 <body>
-<main>
-    <?php
+    <main>
+        <?php
     $url = 'https://raw.githubusercontent.com/Bowserinator/Periodic-Table-JSON/master/PeriodicTableJSON.json';
 
     $data = file_get_contents($url);
@@ -59,8 +59,8 @@ echo "<a class='cell' href='element.php?elemento=" . $element['name'] . "''>";
         echo "</div>";
     }
     ?>
-    
-</main>
+
+    </main>
 </body>
 
 </html>

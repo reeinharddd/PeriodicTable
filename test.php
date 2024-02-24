@@ -5,7 +5,7 @@ $url = "https://duckduckgo-duckduckgo-zero-click-info.p.rapidapi.com/?q=John&cal
 $options = [
     "http" => [
         "header" => "X-RapidAPI-Host: duckduckgo-duckduckgo-zero-click-info.p.rapidapi.com\r\n" .
-                    "X-RapidAPI-Key: 4905e898b1mshbef56d1d6e57437p18523ejsn2253eea8382f"
+            "X-RapidAPI-Key: 4905e898b1mshbef56d1d6e57437p18523ejsn2253eea8382f"
     ]
 ];
 
@@ -29,9 +29,26 @@ if ($response === false) {
     if (!$jsonResponse || !isset($jsonResponse['Abstract'])) {
         echo "Error al decodificar el JSON o propiedad 'Abstract' no encontrada.";
     } else {
-foreach($jsonResponse as $key => $value){
-    echo $key . " : " . $value . "<br>";
-}
+        foreach ($jsonResponse as $key => $value) {
+            if (is_array($value)) {
+                foreach ($value as $key2 => $value2) {
+                    if (is_array($value2)) {
+                        foreach ($value2 as $key3 => $value3) {
+                            if (is_array($value3)) {
+                                foreach ($value3 as $key4 => $value4) {
+                                    echo $key4 . " : " . $value4 . "<br>";
+                                }
+                            } else {
+                                echo $key3 . " : " . $value3 . "<br>";
+                            }
+                        }
+                    } else {
+                        echo $key2 . " : " . $value2 . "<br>";
+                    }
+                }
+            } else {
+                echo $key . " : " . $value . "<br>";
+            }
+        }
     }
 }
-?>
