@@ -1,0 +1,254 @@
+
+body {
+    font-family: Arial;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+main{
+    align-items: center;
+    justify-content: center;
+    margin: 0px 50px 50px;
+}
+.periodic {
+    display: grid;
+    position: relative;
+    height: 200px;
+    margin-right: -1px;
+    text-shadow: none;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+}
+
+.cell{
+    display: grid;
+    float: left;
+    position: relative;
+    border-radius: 15px;
+   
+}
+
+.cell:nth-child(2){
+    
+    grid-column-start: 18;
+}
+
+.cell:nth-child(5){
+    grid-column-start: 13;
+}
+
+.cell:nth-child(13){
+    grid-column-start: 13;
+}
+
+
+.lantanides{
+    display: grid;
+    float: right;
+    position: relative;
+    grid-row-start: 9;
+    grid-column-start: 4;
+background-color: rgb(26, 144, 116);
+    grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
+
+}
+.lantanides .element{
+-ms-grid-column-span: 1;
+}
+.lantanides:hover .element {
+    border-color: rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    transform: scale(3, 3);
+    z-index: 1;
+    background-color: rgba(0, 128, 128, 0.9);
+    filter: saturate(45%);
+}
+
+.actinides{
+    display: grid;
+    float: left;
+    position: relative;
+    grid-row-start: 10;
+    grid-column-start: 4;
+    grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
+
+}
+
+
+
+.element {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 1px;
+    right: 1px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    cursor: default;
+    pointer-events: none;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+    
+}
+
+.cell:hover .element {
+    border-color: rgba(0, 0, 0, 0.1);
+    -webkit-transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    transform: scale(3, 3);
+    z-index: 1;
+    filter: saturate(45%);
+}
+
+.at_num,
+.at_details {
+    position: absolute;
+    font-size: 4px;
+    color: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+}
+
+.at_num {
+    top: 4px;
+    right: 5px;
+}
+
+.symbol {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin-top: -4px;
+    font-size: 9px;
+    line-height: 1;
+    height: 9px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.at_details {
+    bottom: 4px;
+    left: 0px;
+    right: 0px;
+}
+
+/* Colores del cell */
+
+.cell .diatomic_nonmetal {
+    
+    background-color: #5898f9;
+
+}
+
+.cell .noble_gas {
+    background-color: chartreuse;
+}
+
+.cell .alkali_metal {
+    background-color: rgb(97, 112, 243);
+}
+
+.cell .alkaline_earth_metal {
+    background-color: #f9637c;
+}
+
+.cell .metalloid {
+    background-color: rgb(255, 123, 0);
+}
+
+.cell .polyatomic_nonmetal {
+    background-color: #5898f9;
+}
+
+.cell .post-transition_metal {
+    background-color: rgb(129, 133, 124);
+}
+
+.cell .transition_metal {
+    background-color: rgb(115, 69, 140);
+}
+
+.cell .lanthanide {
+    background-color: rgb(26, 144, 116);
+}
+
+.cell .actinide {
+    background-color: rgb(255, 247, 0);
+}
+
+.cell .Gas {
+    color: red;
+}
+
+.cell .Solid {
+    color: rgb(17, 0, 255);
+}
+
+.cell .Liquid {
+    color: rgb(255, 0, 234);
+}
+
+@media (min-width: 600px) {
+    .periodic {
+        height: 460px;
+        margin-right: -2px;
+    }
+    .element {
+        right: 2px;
+        bottom: 2px;
+    }
+    .at_num,
+    .at_details {
+        font-size: 4px;
+        opacity: 1;
+    }
+    .symbol {
+        margin-top: -17px;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 30px;
+        height: 30px;
+        color: rgba(255, 255, 255, 0.75);
+        text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+    }
+}
+
+@media (min-width: 800px) {
+    .periodic {
+        height: 540px;
+    }
+    .symbol {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .periodic {
+        height: 680px;
+    }
+    .at_num,
+    .at_details {
+        font-size: 5px;
+    }
+    .symbol {
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .periodic {
+        height: 800px;
+    }
+    .at_num,
+    .at_details {
+        font-size: 6px;
+    }
+    .symbol {
+        font-size: 30px;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------------------------------*/
