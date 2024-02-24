@@ -1,5 +1,5 @@
 body {
-    background-color: #d3e2cc;
+    background-color: #f0f7ec;
 }
 
 .container {
@@ -19,9 +19,12 @@ body {
 }
 
 model-viewer{
-    width: 300px;
-    height:300px;
-    flex-direction: row;
+    display: flex;
+    width: 841px;
+    height:277px;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
 .item-a {
@@ -42,6 +45,11 @@ model-viewer{
     grid-column-start: 1;
     grid-column-end: span 4;
     border: 1px solid #000;
+}
+.item-c h2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .item-d {
@@ -116,7 +124,7 @@ model-viewer{
 }
 
 .item:hover {
-    background-color: #709357;
+    background-color: #84a56d;
     color: #eef0ea;
     transition: all 0.25s ease;
 }

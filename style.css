@@ -25,6 +25,7 @@ main{
     float: left;
     position: relative;
     border-radius: 15px;
+
    
 }
 
@@ -85,7 +86,6 @@ background-color: rgb(26, 144, 116);
     right: 1px;
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
-    border: 1px solid rgb(0, 0, 0);
     text-align: center;
     cursor: default;
     pointer-events: none;
@@ -139,6 +139,9 @@ background-color: rgb(26, 144, 116);
 .cell .diatomic_nonmetal {
     
     background-color: #5898f9;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+
+
 
 }
 

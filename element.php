@@ -41,9 +41,9 @@
                     2
                     </div>";
 
-                    echo "<div class='item-c item'>
-                    3
-                    </div>";
+                    echo "<div class='item-c item'>";
+                    echo "<h2>" .$element['discovered_by']."</h2>";
+                    echo "</div>";
 
                     echo "<div class='item-d item'>
                     4
