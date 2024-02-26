@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+
+
 
 body {
-    font-family: Arial;
+    font-family:"Amiri Quran", sans-serif;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
@@ -13,7 +16,7 @@ main{
 .periodic {
     display: grid;
     position: relative;
-    height: 200px;
+    height: 830px;
     margin-right: -1px;
     text-shadow: none;
     grid-template-columns: repeat(18, 1fr);
@@ -24,7 +27,8 @@ main{
     display: grid;
     float: left;
     position: relative;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: black;
 
    
 }
@@ -122,7 +126,7 @@ background-color: rgb(26, 144, 116);
     left: 0px;
     right: 0px;
     margin-top: -4px;
-    font-size: 9px;
+    font-size: 30px;
     line-height: 1;
     height: 9px;
     color: rgba(255, 255, 255, 0.9);
@@ -136,16 +140,12 @@ background-color: rgb(26, 144, 116);
 
 /* Colores del cell */
 
-.cell .diatomic_nonmetal {
-    
-    background-color: #5898f9;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
+/* .cell .diatomic_nonmetal {
+    border-radius: 10px;
+    border: 3px solid orange;
+}  */
 
-
-
-}
-
-.cell .noble_gas {
+/* .cell .noble_gas {
     background-color: chartreuse;
 }
 
@@ -191,7 +191,7 @@ background-color: rgb(26, 144, 116);
 
 .cell .Liquid {
     color: rgb(255, 0, 234);
-}
+} */
 
 @media (min-width: 600px) {
     .periodic {

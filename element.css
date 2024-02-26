@@ -81,6 +81,11 @@ model-viewer{
     grid-column-end: span 4;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    
+}
+.item-h img {
+    width: 450px;
+    height: 250px;
 }
 
 .item-i {

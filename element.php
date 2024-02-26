@@ -39,7 +39,6 @@
 
                     // Basic information of the element
                     echo "<div class='item-b item'>";
-                    echo "2";
                     echo "<h1 id='title'>Basic information</h1>";;
                     echo "<p><strong>Name::</strong> " . $element['name'] . "</p>";
                     echo "<p><strong>Atomic Number:</strong> " . $element['number'] . "</p>";
