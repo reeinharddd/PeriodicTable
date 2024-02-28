@@ -3,87 +3,64 @@
 
 
 body {
-    font-family:"Amiri Quran", sans-serif;
+    font-family: "Amiri Quran", sans-serif;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
+    background-color: rgb(182, 202, 218);
 }
-main{
+
+main {
     align-items: center;
     justify-content: center;
     margin: 0px 50px 50px;
+    display: flex;
 }
+
 .periodic {
     display: grid;
     position: relative;
     height: 830px;
-    margin-right: -1px;
     text-shadow: none;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(11, 1fr);
 }
 
-.cell{
+.cell {
     display: grid;
-    float: left;
     position: relative;
     border-radius: 10px;
-    background-color: black;
+    background-color: #0B1215;
+    width: 75px;
+    height: 75px;
 
-   
+
 }
 
-.cell:nth-child(2){
-    
-    grid-column-start: 18;
-}
-
-.cell:nth-child(5){
-    grid-column-start: 13;
-}
-
-.cell:nth-child(13){
-    grid-column-start: 13;
-}
-
-
-.lantanides{
-    display: grid;
-    float: right;
-    position: relative;
-    grid-row-start: 9;
-    grid-column-start: 4;
-background-color: rgb(26, 144, 116);
-    grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
-
-}
-.lantanides .element{
--ms-grid-column-span: 1;
-}
-.lantanides:hover .element {
-    border-color: rgba(0, 0, 0, 0.1);
+.cell:hover .element {
+    border-color: rgba(98, 49, 49, 0.1);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    background-color: rgba(0, 128, 128, 0.9);
     filter: saturate(45%);
 }
 
-.actinides{
-    display: grid;
-    float: left;
-    position: relative;
-    grid-row-start: 10;
-    grid-column-start: 4;
-    grid-column: auto; /* Restablece el valor de la columna a auto para que se desplacen una columna a la vez */
+.cell:nth-child(2) {
 
+    grid-column-start: 18;
 }
 
+.cell:nth-child(5) {
+    grid-column-start: 13;
+}
 
+.cell:nth-child(13) {
+    grid-column-start: 13;
+}
 
 .element {
-    position: absolute;
+    position: sticky;
     top: 0;
     left: 0;
     bottom: 1px;
@@ -93,13 +70,63 @@ background-color: rgb(26, 144, 116);
     text-align: center;
     cursor: default;
     pointer-events: none;
-    -webkit-transition: all 200ms ease;
-    transition: all 200ms ease;
-    
+    transition: all 300ms cubic-bezier(.68, -0.55, .27, 1.55);
 }
 
-.cell:hover .element {
-    border-color: rgba(0, 0, 0, 0.1);
+.at_num,
+.at_details,
+.at_number {
+    position: absolute;
+    font-size: 10px;
+    opacity: 1;
+}
+
+.at_num {
+    top: 0px;
+    right: 5px;
+    font-size: 10px;
+}
+
+.symbol {
+    position: absolute;
+    top: 40%;
+    left: 0px;
+    right: 0px;
+    font-size: 30px;
+    line-height: 1;
+    margin-top: -17px;
+
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.at_details {
+    bottom: 5px;
+    left: 0px;
+    right: 0px;
+}
+
+.at_number {
+    bottom: -4px;
+    right: -1px;
+    left: 0px;
+}
+
+
+.lantanides {
+    display: grid;
+    position: relative;
+    grid-row-start: 9;
+    grid-column-start: 4;
+    grid-column: auto;
+    border-radius: 10px;
+    background-color: #0B1215;
+    width: 75px;
+    height: 75px;
+
+}
+
+.lantanides:hover .element {
+    border-color: rgba(98, 49, 49, 0.1);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
@@ -107,151 +134,270 @@ background-color: rgb(26, 144, 116);
     filter: saturate(45%);
 }
 
-.at_num,
-.at_details {
-    position: absolute;
-    font-size: 4px;
-    color: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-}
 
-.at_num {
-    top: 4px;
-    right: 5px;
-}
-
-.symbol {
-    position: absolute;
-    top: 50%;
-    left: 0px;
-    right: 0px;
-    margin-top: -4px;
-    font-size: 30px;
-    line-height: 1;
-    height: 9px;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.at_details {
-    bottom: 4px;
-    left: 0px;
-    right: 0px;
-}
-
-/* Colores del cell */
-
-/* .cell .diatomic_nonmetal {
+.actinides {
+    display: grid;
+    position: relative;
+    grid-row-start: 10;
+    grid-column-start: 4;
+    grid-column: auto;
     border-radius: 10px;
-    border: 3px solid orange;
-}  */
+    background-color: #0B1215;
+    width: 75px;
+    height: 75px;
 
-/* .cell .noble_gas {
-    background-color: chartreuse;
+}
+
+.actinides:hover .element {
+    border-color: rgba(98, 49, 49, 0.1);
+    -webkit-transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    transform: scale(3, 3);
+    z-index: 1;
+    filter: saturate(45%);
+}
+
+
+.cell .diatomic_nonmetal {
+    border-radius: 8px;
+    border: 3px solid orange;
+}
+
+.diatomic_nonmetal .symbol,
+.diatomic_nonmetal .at_num,
+.diatomic_nonmetal .at_details,
+.diatomic_nonmetal .at_number {
+    color: orange;
+}
+
+.cell .noble_gas {
+    border: 3px solid chartreuse;
+    border-radius: 8px;
+}
+
+.noble_gas .symbol,
+.noble_gas .at_num,
+.noble_gas .at_details,
+.noble_gas .at_number {
+    color: chartreuse;
 }
 
 .cell .alkali_metal {
-    background-color: rgb(97, 112, 243);
+    border: 3px solid rgb(255, 0, 162);
+    border-radius: 8px;
+}
+
+.alkali_metal .symbol,
+.alkali_metal .at_num,
+.alkali_metal .at_details,
+.alkali_metal .at_number {
+    color: rgb(255, 0, 162);
+
 }
 
 .cell .alkaline_earth_metal {
-    background-color: #f9637c;
+    border: 3px solid #ff002b;
+    border-radius: 8px;
+}
+
+.alkaline_earth_metal .symbol,
+.alkaline_earth_metal .at_num,
+.alkaline_earth_metal .at_details,
+.alkaline_earth_metal .at_number {
+    color: #ff002b;
 }
 
 .cell .metalloid {
-    background-color: rgb(255, 123, 0);
+    border: 3px solid rgb(255, 98, 0);
+    border-radius: 8px;
+}
+
+.metalloid .symbol,
+.metalloid .at_num,
+.metalloid .at_details,
+.metalloid .at_number {
+    color: rgb(255, 98, 0);
 }
 
 .cell .polyatomic_nonmetal {
-    background-color: #5898f9;
+    border: 3px solid #0066ff;
+    border-radius: 8px;
+}
+
+.polyatomic_nonmetal .symbol,
+.polyatomic_nonmetal .at_num,
+.polyatomic_nonmetal .at_details,
+.polyatomic_nonmetal .at_number {
+    color: #0066ff;
 }
 
 .cell .post-transition_metal {
-    background-color: rgb(129, 133, 124);
+    border: 3px solid rgb(0, 255, 183);
+    border-radius: 8px;
+}
+
+.post-transition_metal .symbol,
+.post-transition_metal .at_num,
+.post-transition_metal .at_details,
+.post-transition_metal .at_number {
+    color: rgb(0, 255, 183);
 }
 
 .cell .transition_metal {
-    background-color: rgb(115, 69, 140);
+    border: 3px solid rgb(166, 0, 255);
+    border-radius: 8px;
 }
 
-.cell .lanthanide {
-    background-color: rgb(26, 144, 116);
+.transition_metal .symbol,
+.transition_metal .at_num,
+.transition_metal .at_details,
+.transition_metal .at_number {
+    color: rgb(166, 0, 255);
 }
 
-.cell .actinide {
-    background-color: rgb(255, 247, 0);
+.cell .lanthanide,
+.lantanides .lanthanide {
+    border: 3px solid rgb(0, 255, 195);
+    border-radius: 8px;
 }
 
-.cell .Gas {
-    color: red;
-}
-
-.cell .Solid {
-    color: rgb(17, 0, 255);
-}
-
-.cell .Liquid {
-    color: rgb(255, 0, 234);
-} */
-
-@media (min-width: 600px) {
-    .periodic {
-        height: 460px;
-        margin-right: -2px;
-    }
-    .element {
-        right: 2px;
-        bottom: 2px;
-    }
-    .at_num,
-    .at_details {
-        font-size: 4px;
-        opacity: 1;
-    }
-    .symbol {
-        margin-top: -17px;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 30px;
-        height: 30px;
-        color: rgba(255, 255, 255, 0.75);
-        text-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
-    }
-}
-
-@media (min-width: 800px) {
-    .periodic {
-        height: 540px;
-    }
-    .symbol {
-        font-size: 20px;
-    }
-}
-
-@media (min-width: 992px) {
-    .periodic {
-        height: 680px;
-    }
-    .at_num,
-    .at_details {
-        font-size: 5px;
-    }
-    .symbol {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: 1200px) {
-    .periodic {
-        height: 800px;
-    }
-    .at_num,
-    .at_details {
-        font-size: 6px;
-    }
-    .symbol {
-        font-size: 30px;
-    }
+.lanthanide .symbol,
+.lanthanide .at_num,
+.lanthanide .at_details,
+.lanthanide .at_number {
+    color: rgb(0, 255, 195);
 }
 
 
-/*----------------------------------------------------------------------------------------------------------------*/
+.cell .actinide,
+.actinides .actinide {
+    border: 3px solid rgb(255, 247, 0);
+    border-radius: 8px;
+}
+
+.actinide .symbol,
+.actinide .at_num,
+.actinide .at_details,
+.actinide .at_number {
+    color: rgb(255, 247, 0);
+}
+
+.null {
+    background-color: #5e5e5e;
+    color: #c6c6c6;
+    border-color: #000;
+}
+
+.null .symbol,
+.null .at_num,
+.null .at_details,
+.null .at_number {
+    color: #828181;
+}
+
+/*--------------------------------------        NAV      --------------------------------------------------------------------------*/
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+code {
+    color: #e4cb58;
+    font: inherit;
+}
+
+button {
+    background-color: var(--color);
+    /* background: none;
+backdrop-filter: blur(10px); */
+    border: 2px solid var(--color);
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
+    margin: 7px;
+    padding: 5px;
+    font-size: 15px;
+
+    border-radius: 5px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+raise:hover,
+.raise:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+    transform: translateY(-0.25em);
+}
+
+
+
+button {
+    color: #0B1215;
+    transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--hover);
+    border-color: var(--hover);
+    color: #0B1215;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.diatomic_nonmetal {
+    --color: orange;
+    --hover: rgb(255, 207, 119);
+}
+
+.noble_gas {
+    --color: chartreuse;
+
+}
+
+.alkali_metal {
+    --color: rgb(255, 0, 162);
+}
+
+.alkaline_earth_metal {
+    --color: #ff002b;
+}
+
+.metalloid {
+    --color: rgb(255, 98, 0);
+}
+
+.polyatomic_nonmetal {
+    --color: #0066ff;
+}
+
+.post-transition_metal {
+    --color: rgb(0, 255, 183);
+}
+
+.transition_metal {
+    --color: rgb(166, 0, 255);
+}
+
+.lanthanide {
+    --color: rgb(0, 255, 195);
+}
+
+.actinide {
+    --color: rgb(255, 247, 0);
+}
