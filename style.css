@@ -315,10 +315,10 @@ code {
 }
 
 button {
-    background-color: var(--color);
+    background-color: #0B1215;
     /* background: none;
 backdrop-filter: blur(10px); */
-    border: 2px solid var(--color);
+    border: 3px solid var(--color);
     box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
     margin: 7px;
     padding: 5px;
@@ -339,7 +339,7 @@ raise:hover,
 
 
 button {
-    color: #0B1215;
+    color: var(--color);
     transition: 0.25s;
 }
 
@@ -362,42 +362,56 @@ form {
 
 .diatomic_nonmetal {
     --color: orange;
-    --hover: rgb(255, 207, 119);
+    --hover: orange;
 }
 
 .noble_gas {
     --color: chartreuse;
+    --hover: chartreuse;
 
 }
 
 .alkali_metal {
     --color: rgb(255, 0, 162);
+    --hover: rgb(255, 0, 162);
 }
 
 .alkaline_earth_metal {
     --color: #ff002b;
+    --hover: #ff002b;
 }
 
 .metalloid {
     --color: rgb(255, 98, 0);
+    --hover: rgb(255, 98, 0);
 }
 
 .polyatomic_nonmetal {
     --color: #0066ff;
+    --hover: #0066ff;
 }
 
 .post-transition_metal {
     --color: rgb(0, 255, 183);
+    --hover: rgb(0, 255, 183);
 }
 
 .transition_metal {
     --color: rgb(166, 0, 255);
+    --hover: rgb(166, 0, 255);
 }
 
 .lanthanide {
     --color: rgb(0, 255, 195);
+    --hover: rgb(0, 255, 195);
 }
 
 .actinide {
     --color: rgb(255, 247, 0);
+    --hover: rgb(255, 247, 0);
+}
+
+.reset {
+    --color: #636464;
+    --hover: #636363;
 }
