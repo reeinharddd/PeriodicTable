@@ -7,7 +7,13 @@ body {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-    background-color: rgb(182, 202, 218);
+background-image: url(chemistry2.jpeg) ; 
+backdrop-filter: blur(10px);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+  
 }
 
 main {
@@ -15,6 +21,7 @@ main {
     justify-content: center;
     margin: 0px 50px 50px;
     display: flex;
+    
 }
 
 .periodic {
@@ -38,12 +45,13 @@ main {
 }
 
 .cell:hover .element {
-    border-color: rgba(98, 49, 49, 0.1);
+    background-color: #0b12159f;
+    border-color: var(--color);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    filter: saturate(45%);
+    filter: saturate(67%);
 }
 
 .cell:nth-child(2) {
@@ -157,6 +165,11 @@ main {
     filter: saturate(45%);
 }
 
+.element {
+    border: 3px solid #b8b8b8;
+    border-radius: 8px;
+
+}
 
 .cell .diatomic_nonmetal {
     border-radius: 8px;
@@ -412,6 +425,6 @@ form {
 }
 
 .reset {
-    --color: #636464;
-    --hover: #636363;
+    --color: #e9ebeb;
+    --hover: #e9e9e9;
 }
