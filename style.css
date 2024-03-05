@@ -7,12 +7,13 @@ body {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-background-image: url(chemistry2.jpeg) ; 
+background: linear-gradient(109.6deg, rgb(72, 200, 160) 11.2%, rgb(32, 40, 48) 91.3%);
+/* background-image: url(chemistry2.jpeg) ; 
 backdrop-filter: blur(10px);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center;
+    background-position: center; */
   
 }
 
@@ -134,12 +135,13 @@ main {
 }
 
 .lantanides:hover .element {
-    border-color: rgba(98, 49, 49, 0.1);
+      background-color: #0b12159f;
+    border-color: var(--color);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    filter: saturate(45%);
+    filter: saturate(67%);
 }
 
 
@@ -157,12 +159,13 @@ main {
 }
 
 .actinides:hover .element {
-    border-color: rgba(98, 49, 49, 0.1);
+      background-color: #0b12159f;
+    border-color: var(--color);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
     transform: scale(3, 3);
     z-index: 1;
-    filter: saturate(45%);
+    filter: saturate(67%);
 }
 
 .element {
@@ -173,18 +176,18 @@ main {
 
 .cell .diatomic_nonmetal {
     border-radius: 8px;
-    border: 3px solid orange;
+    border: 3px solid var(--color);
 }
 
 .diatomic_nonmetal .symbol,
 .diatomic_nonmetal .at_num,
 .diatomic_nonmetal .at_details,
 .diatomic_nonmetal .at_number {
-    color: orange;
+    color:var(--color);
 }
 
 .cell .noble_gas {
-    border: 3px solid chartreuse;
+    border: 3px solidvar(--color);
     border-radius: 8px;
 }
 
@@ -192,11 +195,11 @@ main {
 .noble_gas .at_num,
 .noble_gas .at_details,
 .noble_gas .at_number {
-    color: chartreuse;
+    color:var(--color);
 }
 
 .cell .alkali_metal {
-    border: 3px solid rgb(255, 0, 162);
+    border: 3px solidvar(--color);
     border-radius: 8px;
 }
 
@@ -204,12 +207,12 @@ main {
 .alkali_metal .at_num,
 .alkali_metal .at_details,
 .alkali_metal .at_number {
-    color: rgb(255, 0, 162);
+    color: var(--color);
 
 }
 
 .cell .alkaline_earth_metal {
-    border: 3px solid #ff002b;
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -217,11 +220,11 @@ main {
 .alkaline_earth_metal .at_num,
 .alkaline_earth_metal .at_details,
 .alkaline_earth_metal .at_number {
-    color: #ff002b;
+    color: var(--color);
 }
 
 .cell .metalloid {
-    border: 3px solid rgb(255, 98, 0);
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -229,11 +232,11 @@ main {
 .metalloid .at_num,
 .metalloid .at_details,
 .metalloid .at_number {
-    color: rgb(255, 98, 0);
+    color: var(--color);
 }
 
 .cell .polyatomic_nonmetal {
-    border: 3px solid #0066ff;
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -241,11 +244,11 @@ main {
 .polyatomic_nonmetal .at_num,
 .polyatomic_nonmetal .at_details,
 .polyatomic_nonmetal .at_number {
-    color: #0066ff;
+    color: var(--color);
 }
 
 .cell .post-transition_metal {
-    border: 3px solid rgb(0, 255, 183);
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -253,11 +256,11 @@ main {
 .post-transition_metal .at_num,
 .post-transition_metal .at_details,
 .post-transition_metal .at_number {
-    color: rgb(0, 255, 183);
+    color:var(--color);
 }
 
 .cell .transition_metal {
-    border: 3px solid rgb(166, 0, 255);
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -265,12 +268,12 @@ main {
 .transition_metal .at_num,
 .transition_metal .at_details,
 .transition_metal .at_number {
-    color: rgb(166, 0, 255);
+    color: var(--color);
 }
 
 .cell .lanthanide,
 .lantanides .lanthanide {
-    border: 3px solid rgb(0, 255, 195);
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -278,13 +281,13 @@ main {
 .lanthanide .at_num,
 .lanthanide .at_details,
 .lanthanide .at_number {
-    color: rgb(0, 255, 195);
+    color:var(--color);
 }
 
 
 .cell .actinide,
 .actinides .actinide {
-    border: 3px solid rgb(255, 247, 0);
+    border: 3px solid var(--color);
     border-radius: 8px;
 }
 
@@ -292,21 +295,33 @@ main {
 .actinide .at_num,
 .actinide .at_details,
 .actinide .at_number {
-    color: rgb(255, 247, 0);
+    color:var(--color);
 }
 
+.cell .unknown {
+    border: 3px solid var(--color);
+    border-radius: 8px;
+}
+
+.unknown .symbol,
+.unknown .at_num,
+.unknown .at_details,
+.unknown .at_number {
+    color: var(--color);
+}
 .null {
-    background-color: #5e5e5e;
-    color: #c6c6c6;
-    border-color: #000;
+    background-color: #73737562;
+    color: #7b7a7a;
+    border: 3px solid #7b7a7a;
 }
 
 .null .symbol,
 .null .at_num,
 .null .at_details,
 .null .at_number {
-    color: #828181;
+    color: #7b7a7a;
 }
+
 
 /*--------------------------------------        NAV      --------------------------------------------------------------------------*/
 
@@ -320,10 +335,19 @@ main {
 
 h1 {
     font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    margin: 0px;
+    margin-top: -110px;
 }
 
 code {
-    color: #e4cb58;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(72, 200, 160);
     font: inherit;
 }
 
@@ -428,3 +452,10 @@ form {
     --color: #e9ebeb;
     --hover: #e9e9e9;
 }
+
+.unknown {
+    --color: #538686;
+    --hover: #538686;
+}
+
+
