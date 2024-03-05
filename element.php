@@ -192,36 +192,43 @@
 
                     <div class='item-f item' id='discovery'>
                         <div class='title-container'>
+                            <h1>Position in the table</h1>
+                        </div>
+                        <div class="scroll3">
+                            <table>
+                                <tr>
+                                    <td><strong>Group:</strong></td>
+                                    <td><?php echo $element['xpos']; ?></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Line:</strong></td>
+                                    <td><?php echo $element['ypos']; ?></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class='item-g item' id='position'> 
+                        <div class='title-container'>
                             <h1>Discovery and Named</h1>
                         </div>
-                        <div class="scroll2">
+                        <div class="scroll">
                             <table>
                                 <tr>
                                     <td><strong>Discovered by:</strong></td>
                                     <td><?php echo $element['discovered_by']; ?></td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Named by:</strong></td>
-                                    <td><?php echo $element['named_by']; ?></td>
-                                </tr>
+                                    <?php
+                                    if ($element['named_by'] === null) {
+                                        echo "";
+                                    } else {
+                                        echo "<td><strong>Named by:</strong></td><td>" . $element['named_by'] . "</td>";
+                                    } 
+                                    ?>
+                                    </tr>
                             </table>
                         </div>
-                    </div>
-
-                    <div class='item-g item' id='position'>
-                        <div class='title-container'>
-                            <h1>Position in the Periodic Table</h1>
-                        </div>
-                        <table>
-                            <tr>
-                                <td><strong>X position:</strong></td>
-                                <td><?php echo $element['xpos']; ?></td>
-                            </tr>
-                            <tr>
-                                <td><strong>Y position:</strong></td>
-                                <td><?php echo $element['ypos']; ?></td>
-                            </tr>
-                        </table>
                     </div>
 
                     <div class='item-h item' id='image'>

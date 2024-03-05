@@ -373,8 +373,28 @@ header a:hover {
     .item-a {
         grid-column-start: 1;
         grid-column-end: 5;
-        grid-row-start: 1;
-        grid-row-end: 3;
+        border-top: 1px solid #000;
+        border-left: 1px solid #000;
+        border-right: 1px solid #000;
+        border-bottom: 1px solid #000;
+        flex-direction: column; 
+        margin-bottom: 20px;
+        margin-right: 730px;
+        background-color: black;
+        text-align: left;
+        color: rgb(189, 189, 189);
+        font-family: "Amiri Quran", sans-serif;
+        top: 0;
+        left: 0;
+        bottom: 1px;
+        right: 1px;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+        text-align: center;
+        border-radius: 20px;
+        cursor: default;
+        transition: all 300ms cubic-bezier(.68, -0.55, .27, 1.55);
+        box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
     }
     .item-b {
         grid-column-start: 1;
