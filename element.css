@@ -19,15 +19,16 @@ body {
 }
 
 #icon {
-    display: flex; /* Usa flexbox para alinear los elementos hijos horizontalmente */
-    align-items: center; /* Alinea los elementos hijos verticalmente al centro */
-    font-family: 'Courier New';
+    display: flex; 
+    align-items: center; 
+    font-family: "Amiri Quran", sans-serif;
 }
 
 #icon img {
-    width: 30px; /* Define el ancho deseado para la imagen */
-    height: auto; /* Establece la altura automática para mantener la proporción original */
-    margin-right: 10px; /* Opcional: agrega un margen a la derecha para separar la imagen del texto */
+    width: 30px; 
+    height: auto;
+    margin-right: 10px; 
+    pointer-events: none;
 }
 
 model-viewer{
@@ -45,10 +46,30 @@ model-viewer{
     border-bottom: 1px solid #000;
     flex-direction: column; 
     margin-bottom: 20px;
-    margin-right: 700px;
+    margin-right: 730px;
     background-color: black;
     text-align: left;
     color: rgb(189, 189, 189);
+    font-family: "Amiri Quran", sans-serif;
+    top: 0;
+    left: 0;
+    bottom: 1px;
+    right: 1px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    border-radius: 20px;
+    cursor: default;
+    transition: all 300ms cubic-bezier(.68, -0.55, .27, 1.55);
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
+}
+
+.item-a .title-margin {
+    margin: 10px;
+    background-color: #e32323;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
 }
 
 .item-a .title-symbol {
@@ -84,7 +105,9 @@ model-viewer{
     grid-column-end: span 4;
     border: 1px solid #000;
     background-color: #BFEA7C;
+    font-family: "Amiri Quran", sans-serif;
     padding: 20px;
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
 }
 
 /* .item-b .title-container {
@@ -116,6 +139,8 @@ table td:first-child {
     font-size: 18px;
     background-color: #836FFF;
     padding: 20px; 
+    font-family: "Amiri Quran", sans-serif;
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
 }
 
 .item-d {
@@ -126,6 +151,8 @@ table td:first-child {
     border-right: 1px solid #000;
     background-color: #EFF5F5;
     padding: 20px; 
+    font-family: "Amiri Quran", sans-serif;
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
 }
 
 /* .item-d .title-container {
@@ -145,6 +172,7 @@ table td:first-child {
     border-left: 1px solid #000;
     background-color: #F85959;
     padding: 20px; 
+    font-family: "Amiri Quran", sans-serif;
 }
 
 /* .item-e .title-container {
@@ -179,6 +207,8 @@ table td:first-child {
     border-bottom: 1px solid #000;
     background-color: #F8DE22;
     padding: 20px; 
+    font-family: "Amiri Quran", sans-serif;
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
 }
 
 /* .item-f .title-container {
@@ -198,6 +228,8 @@ table td:first-child {
     border-bottom: 1px solid #000;
     padding: 20px; 
     background-color: #C147E9;
+    font-family: "Amiri Quran", sans-serif;
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
 }
 
 /* .item-g .title-container {
@@ -214,18 +246,19 @@ table td:first-child {
     grid-column-end: span 4;
     border-left: 1px solid #000;
     border-right: 1px solid #000;
+    font-family: "Amiri Quran", sans-serif;
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
 }
 
 .item-h img {
     width: 500px;
     height: 253px;
     transition: all 0.25s ease;
-    object-fit: cover;
-    background-color: #fff;
+    background-color: #131313;
 }
 
 img:hover {
-    transform: scale(1.1);
+    transform: scale(2.2); 
     transition: all 0.25s ease;
 }
 
@@ -238,6 +271,17 @@ img:hover {
     border-right: 1px solid #000;
     padding: 20px; 
     background-color: #64DFDF;
+    font-family: "Amiri Quran", sans-serif;
+}
+
+.item-c .model {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    float: left;
+    margin-right: 5px; /* Puedes ajustar este valor según sea necesario */
 }
 
 /* .item-i .title-container {
@@ -249,12 +293,17 @@ img:hover {
     flex-direction: column; 
 } */
 
-.item-j {
-    grid-column-start: 1;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+.model {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    float: left;
+    margin-right: 5px; /* Puedes ajustar este valor según sea necesario */
 }
+
+
 
 .border-interrupt {
     background-color: #FFFF63;
@@ -273,8 +322,6 @@ img:hover {
 }
 
 .item:hover {
-    background-color: #ffffff;
-    color: #0c0c0c;
     transition: all 0.25s ease;
     transform: scale(1.1);
 }
@@ -284,22 +331,29 @@ img:hover {
 }
 
 header {
-    padding: 10px; /* Añade espacio alrededor del contenido del encabezado */
-    display: flex; /* Usa flexbox para distribuir los elementos */
-    justify-content: space-around; /* Distribuye los elementos equitativamente */
-    align-items: center; /* Centra verticalmente los elementos */
+    padding: 10px; 
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+    align-content: center;
+    justify-content: center;
 }
 
 header a {
-    text-decoration: none; /* Elimina la decoración del enlace */
-    color: #333; /* Color del texto del enlace */
-    font-weight: bold; /* Texto en negrita */
-    padding: 5px 10px; /* Añade espacio interno alrededor del texto del enlace */
-    border-radius: 5px; /* Agrega bordes redondeados a los enlaces */
+    text-decoration: none; 
+    color: rgb(189, 189, 189);
+    font-weight: bold; 
+    padding: 5px 10px; 
+    border-radius: 10px; 
+    background-color: #0B1215;
+    border: 3px solid var(--color);
+    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
+    margin: 2px;
 }
 
 header a:hover {
-    background-color: #709357; 
+    background-color: #e6e6e6; 
+    color: #0B1215;
     transform: scale(1.1);
     transition: all 0.25s ease;
 }

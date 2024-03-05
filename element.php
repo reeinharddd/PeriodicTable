@@ -17,13 +17,13 @@
 
         <a href="index.php" id="icon"><img src="img/atras.png" alt="Back icon"> Back</a> <!-- Back button -->
         <a href="#basicInfo" id="icon"> <img src="img/iconColor1.png" alt="Info icon"> Basic Information</a> <!-- Basic Information / item b-->
-        <a href="#summary" id="icon"><img src="img/iconColor1.png" alt="Summary icon"> Summary</a> <!-- Summary / item c-->
-        <a href="#physical" id="icon"><img src="img/iconColor1.png" alt="Physical icon"> Physical</a> <!-- Physical / item d-->
-        <a href="#chemical" id="icon"><img src="img/iconColor1.png" alt="Chemical icon"> Chemical</a> <!-- Chemical / item e-->
-        <a href="#discovery" id="icon"><img src="img/iconColor1.png" alt="Discovery icon"> Discovery and Named</a> <!-- Discovery and Named / item f-->
-        <a href="#position" id="icon"><img src="img/iconColor1.png" alt="Position icon"> Position in the Periodic Table</a> <!-- Position in the Periodic Table / item g-->
-        <a href="#image" id="icon"><img src="img/iconColor1.png" alt="Image icon"> Image</a> <!-- Image / item h-->
-        <a href="#electronic" id="icon"><img src="img/iconColor1.png" alt="Electronic icon"> Electronic Configuration</a> <!-- Electronic Configuration / item i-->
+        <a href="#summary" id="icon"><img src="img/iconColor2.png" alt="Summary icon"> Summary</a> <!-- Summary / item c-->
+        <a href="#physical" id="icon"><img src="img/iconColor3.png" alt="Physical icon"> Physical</a> <!-- Physical / item d-->
+        <a href="#chemical" id="icon"><img src="img/iconColor4.png" alt="Chemical icon"> Chemical</a> <!-- Chemical / item e-->
+        <a href="#discovery" id="icon"><img src="img/iconColor5.png" alt="Discovery icon"> Discovery and Named</a> <!-- Discovery and Named / item f-->
+        <a href="#position" id="icon"><img src="img/iconColor6.png" alt="Position icon"> Position in the Periodic Table</a> <!-- Position in the Periodic Table / item g-->
+        <a href="#image" id="icon"><img src="img/iconColor7.png" alt="Image icon"> Image</a> <!-- Image / item h-->
+        <a href="#electronic" id="icon"><img src="img/iconColor8.png" alt="Electronic icon"> Electronic Configuration</a> <!-- Electronic Configuration / item i-->
 
     </header>
 
@@ -36,6 +36,17 @@
         $array = json_decode($data, true);
 
         echo "<div class='container'>";
+        // if ($array){
+        //     foreach ($array['elements'] as $element) {
+        //         if ($element['name'] === $elementName) { 
+        //             echo "<div class='model'>";
+        //             echo "<model-viewer src='" . $element['bohr_model_3d'] . "' ar ar-modes='webxr scene-viewer quick-look' camera-controls tone-mapping='commerce' poster='poster.webp' shadow-intensity='2' autoplay> </model-viewer> ";
+        //             echo "</div>";
+        //         }
+        //     }
+        // } else {
+        //     echo "No hay datos o hay un error en la decodificación del JSON.";
+        // }
         echo "<div class='grid'>";
 
         if (!$array) {
@@ -48,14 +59,12 @@
                     echo "<div class='title-symbol'><h1>" . $element['symbol'] . "</h1></div>";
                     echo "<div class='title-text'><h1>" . $element['name'] . "</h1></div>";
                     echo "<div class='title-mass'><h1>" . $element['atomic_mass'] . "</h1></div>";
-                    
-                    //echo "<model-viewer src='" . $element['bohr_model_3d'] . "' ar ar-modes='webxr scene-viewer quick-look' camera-controls tone-mapping='commerce' poster='poster.webp' shadow-intensity='2' autoplay> </model-viewer> ";
                     echo "</div>";
 
     ?>
                     <div class='item-b item' id='basicInfo'>
-                        
-                            <h1 id='title'>Basic information</h1>
+
+                        <h1 id='title'>Basic information</h1>
 
                         <table>
                             <tr>
@@ -90,9 +99,13 @@
                     </div>
                     <?php
                     echo "<div class='item-c item' id='summary'>";
-                    // echo "3"; 
+                    // modelo 3d
                     echo "<h1>Summary</h1>";
                     echo "<p><strong>Phase:</strong> " . $element['summary'] . "</p>";
+                    // modelo 3d
+                    echo "<div class='model'>";
+                    echo "<model-viewer src='" . $element['bohr_model_3d'] . "' ar ar-modes='webxr scene-viewer quick-look' camera-controls tone-mapping='commerce' poster='poster.webp' shadow-intensity='2' autoplay> </model-viewer> ";
+                    echo "</div>";
                     echo "</div>";
                     ?>
                     <div class='item-d item' id='physical'>
@@ -231,8 +244,6 @@
                             </table>
                         </div>
                     </div>
-
-
     <?php
                 }
             }
