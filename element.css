@@ -370,17 +370,12 @@ header a:hover {
         font-size: 130px;
         margin-top: 0;
     }
-    header a {
-    text-decoration: none; 
-    color: rgb(189, 189, 189);
-    font-weight: bold; 
-    padding: 5px 10px; 
-    border-radius: 10px; 
-    background-color: #0B1215;
-    border: 3px solid var(--color);
-    box-shadow: 23px 12px 33px -6px rgba(11, 18, 21, 0.74);
-    margin: 2px;
-}
+    .item-a {
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
     .item-b {
         grid-column-start: 1;
         grid-column-end: 3;
