@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
 body {
@@ -7,14 +8,14 @@ body {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
-background: linear-gradient(109.6deg, rgb(72, 200, 160) 11.2%, rgb(32, 40, 48) 91.3%);
-/* background-image: url(chemistry2.jpeg) ; 
+    background: linear-gradient(109.6deg, rgb(72, 200, 160) 11.2%, rgb(122, 166, 211) 91.3%);
+    /* background-image: url(chemistry2.jpeg) ; 
 backdrop-filter: blur(10px);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center; */
-  
+
 }
 
 main {
@@ -22,7 +23,7 @@ main {
     justify-content: center;
     margin: 0px 50px 50px;
     display: flex;
-    
+
 }
 
 .periodic {
@@ -135,7 +136,7 @@ main {
 }
 
 .lantanides:hover .element {
-      background-color: #0b12159f;
+    background-color: #0b12159f;
     border-color: var(--color);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
@@ -159,7 +160,7 @@ main {
 }
 
 .actinides:hover .element {
-      background-color: #0b12159f;
+    background-color: #0b12159f;
     border-color: var(--color);
     -webkit-transform: scale(3, 3);
     -ms-transform: scale(3, 3);
@@ -183,7 +184,7 @@ main {
 .diatomic_nonmetal .at_num,
 .diatomic_nonmetal .at_details,
 .diatomic_nonmetal .at_number {
-    color:var(--color);
+    color: var(--color);
 }
 
 .cell .noble_gas {
@@ -195,7 +196,7 @@ main {
 .noble_gas .at_num,
 .noble_gas .at_details,
 .noble_gas .at_number {
-    color:var(--color);
+    color: var(--color);
 }
 
 .cell .alkali_metal {
@@ -256,7 +257,7 @@ main {
 .post-transition_metal .at_num,
 .post-transition_metal .at_details,
 .post-transition_metal .at_number {
-    color:var(--color);
+    color: var(--color);
 }
 
 .cell .transition_metal {
@@ -281,7 +282,7 @@ main {
 .lanthanide .at_num,
 .lanthanide .at_details,
 .lanthanide .at_number {
-    color:var(--color);
+    color: var(--color);
 }
 
 
@@ -295,7 +296,7 @@ main {
 .actinide .at_num,
 .actinide .at_details,
 .actinide .at_number {
-    color:var(--color);
+    color: var(--color);
 }
 
 .cell .unknown {
@@ -309,6 +310,7 @@ main {
 .unknown .at_number {
     color: var(--color);
 }
+
 .null {
     background-color: #73737562;
     color: #7b7a7a;
@@ -334,20 +336,20 @@ main {
 }
 
 h1 {
+    font-family: 'Merriweather', sans-serif;
     font-weight: 400;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 100px;
     margin: 0px;
-    margin-top: -110px;
+    margin-top: -15px;
 }
 
 code {
     display: flex;
     justify-content: center;
     align-items: center;
-    color:rgb(72, 200, 160);
     font: inherit;
 }
 
@@ -457,5 +459,3 @@ form {
     --color: #538686;
     --hover: #538686;
 }
-
-
